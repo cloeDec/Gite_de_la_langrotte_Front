@@ -1,0 +1,99 @@
+.pictures_contact {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  position: relative;
+  margin: 50px 150px;
+  padding: 10px;
+  margin-top: -50px;
+  background-color: var(--colors-primary);
+  font-family: var(--font-family-primary);
+  box-shadow: 0px 2px 5px grey; 
+}
+
+.name-container,
+.contact-info {
+  display: flex;
+
+  width: 100%;
+
+  justify-content: space-between;
+}
+
+
+
+input,
+textarea {
+  margin: 5px 0;
+  padding: 10px;
+  background-color: var(--colors-primary);
+  border: 2px var(--color-tertiary) solid;
+  width: calc(50% - 5px); 
+  box-sizing: border-box;
+  font-family: var(--font-family-primary);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  width: 100%;
+  font-family: var(--font-family-primary);
+}
+
+button {
+  background-color: var(--color-tertiary);
+  border: 1px var(--color-tertiary) solid;
+  color: var(--color-font-secondary);
+  font-family: var(--font-family-primary);
+  font-size: 1.4vw;
+  padding: 10px;
+}
+
+p{
+  font-family: var(--font-family-secondary);
+  font-size: 2.5vw;
+}
+
+.location-container {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+  justify-content: space-between; /* Pour les espacer horizontalement */
+  margin: 20px 40px;
+  align-items: center;
+}
+
+.location-container p,
+.location-container iframe {
+  flex: 1; /* Les deux éléments occupent une part égale de l'espace disponible */
+  margin: 10px; /* Ajoutez une marge entre les éléments */
+}
+
+@media (max-width: 900px) {
+  .pictures_contact {
+    width: 100%;
+    height: 257px;
+    object-fit: cover;
+  }
+
+  .contact-form {
+    margin: 30px;
+    padding: 10px;
+    margin-top: -50px;
+  }
+
+  p{
+    font-size: 4.5vw;
+  }
+
+  button {
+    font-size: 3vw;
+    padding: 10px;
+  }
+
+}

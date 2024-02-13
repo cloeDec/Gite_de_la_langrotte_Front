@@ -1,0 +1,123 @@
+/* Slider homepage */
+
+.slider {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+}
+
+body {
+  text-align: center;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-font-primary);
+  font-family: var(--font-family-primary);
+  font-size: 1.5vw;
+  margin: 0px 100px;
+}
+
+.blason-image {
+  width: 11vw;
+  height: auto;
+}
+
+.description .text-container{
+  margin: 0 0.5vw;
+}
+
+h3 {
+  margin: 1vw;
+  color: var(--color-font-tertiary);
+  font-family: var(--font-family-secondary);
+  font-size: 3vw;
+}
+
+@media (max-width: 900px) {
+  h3 {
+    font-size: 5vw;
+  }
+
+  .description {
+    font-size: 2.5vw;
+    margin: 5px 40px;
+  }
+}
+
+/* Les card Gites  */
+.gite-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gite-container .card {
+  background-color: var(--colors-secondary);
+  color: var(--color-font-secondary);
+  margin: 2vw 4vw;
+  width: 250px;
+  height: 400px;
+  box-shadow: 5px 5px 5px rgb(163, 161, 161);
+}
+
+.gite-container .card:hover {
+  transform: scale(1.1); 
+}
+
+.gite-container .card img {
+  margin: 15px;
+  width: 210px;
+  height: 270px;
+  object-fit: cover;
+}
+
+.gite-container .name_gite {
+  font-family: var(--font-family-primary);
+  font-size: 200%;
+  padding: 5px;
+}
+
+@media (max-width: 900px) {
+  .gite-container {
+    margin: 0 20px;
+  }
+  .gite-container .card:hover {
+    transform: none; 
+  }
+}
+
+/* Slider Avis */
+.slider-container {
+  margin-bottom: 50px;
+}
+
+.avis-container {
+  margin-top: 10px;
+  margin-right: 120px;
+  margin-left: 120px;
+  margin-bottom: 25px;
+  padding: 10px;
+  font-family: var(--font-family-primary);
+}
+
+.avis-container h4 {
+  font-family: var(--font-family-primary);
+  color: var(--color-font-primary);
+  font-size: 28px;
+}
+.avis-container p {
+  font-family: var(--font-family-primary);
+  font-size: 22px;
+}
+
+@media (max-width: 900px) {
+  .avis-container {
+    margin-top: 10px;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 25px;
+  }
+}

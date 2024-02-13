@@ -1,0 +1,50 @@
+.admin img {
+    width: 20px;
+}
+
+.admin{
+    margin: 15px;
+}
+
+.admin h1{
+    margin: 15px;
+}
+
+.table_gite,
+.table_reservation,
+.table_client{
+    display: inline-block;
+    margin: 20px;
+    justify-content: center;
+}
+
+th{
+    border: 1px solid black;
+    padding: 15px;
+}
+
+td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.admin .add_gite{
+    display: flex;
+}
+
+.admin .patch_gite{
+    display: flex;
+}
+
+.admin button{
+    background-color: transparent;
+    padding: 1px;
+}
+
+.Validée{
+    background-color: rgba(64, 192, 87, 0.7);
+}
+
+.Refusée{
+    background-color: rgba(250, 82, 82, 0.7);
+}

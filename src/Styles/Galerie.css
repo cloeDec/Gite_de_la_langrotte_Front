@@ -1,0 +1,13 @@
+.galerie-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pictures {
+  margin: 15px;
+  width: 380px;
+  height: 282px;
+  object-fit: cover;
+}

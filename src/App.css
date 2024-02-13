@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+/* Réinitialisation du style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url("https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Charm&display=swap");
+
+/* Variables CSS personnalisées */
+:root {
+  --color-font-primary: #000000;
+  --color-font-secondary: #f5efea;
+  --color-font-tertiary: #d9b456;
+  --colors-primary: #f5efea;
+  --colors-secondary: #ae5e52;
+  --color-tertiary: #d9b456;
+  --font-family-primary: "Oranienbaum";
+  --font-family-secondary: "Charm";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Styling du corps */
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--colors-primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: var(--color-tertiary);
+  border: 1px var(--color-tertiary) solid;
+  color: var(--color-font-secondary);
+  font-family: var(--font-family-primary);
+  font-size: 1.4vw;
+  padding: 10px;
+}
+
+@media (max-width: 900px) {
+  button {
+    font-size: 5vw;
+    padding: 5px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar */
+.navbar {
+  background-color: var(--colors-secondary);
+  color: var(--color-font-secondary);
+  font-family: var(--font-family-primary);
+  font-size: 1.5vw;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-title {
+  margin: 10px;
+  display: flex;
+  font-family: var(--font-family-secondary);
+  font-size: 2.5vw;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#logo {
+  margin: 10px;
+  width: 5vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.lien_nav {
+  margin: 15px;
+  text-decoration: none;
+  color: var(--color-font-secondary);
+  width: 150px;
+  height: 40px;
+}
+
+.menu_burger {
+  display: none;
+  margin: 10px;
+  height: 40px;
+  margin-left: auto;
+}
+
+/* Navbar responsive */
+@media (max-width: 900px) {
+  .navbar {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    font-size: 3vw;
+    z-index: 2;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar-title {
+    font-size: 4vw;
   }
+  #logo {
+    width: 8vw;
+  }
+  .menu_burger {
+    display: block;
+    z-index: 2;
+  }
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-color: rgba(122, 20, 39, 0.7);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    font-size: 5vw;
+  }
+  .nav-links.active {
+    transform: translateX(0);
+  }
+}
+
+/* Footer */
+.footer {
+  position: static;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--colors-secondary);
+  color: var(--color-font-secondary);
+  font-family: var(--font-family-secondary);
+  padding: 10px;
 }
