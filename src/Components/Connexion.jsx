@@ -5,10 +5,12 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import AuthContext from "../context/AuthContext";
 
 const Connexion = () => {
   const [utilisateur, setUtilisateur] = useState({});
   const navigate = useNavigate();
+  const {isAuthenticated, setisAuthenticated} = useContext(AuthContext)
 
   const handleChange = (event) => {
     const { name, value } = event.currentTarget;
@@ -20,8 +22,10 @@ const Connexion = () => {
     try {
       const response = await utilisateurService.loginUtilisateur(utilisateur);
       console.log(response);
-      axios.defaults.headers["Authorization"] = "Bearer " + response; //ajouter .data aprés response pour protéger la page
+      axios.defaults.headers["Authorization"] = "Bearer " + response.data; //ajouter .data aprés response pour protéger la page
       toast.success("Vous êtes est connecté");
+      setisAuthenticated(true);
+      console.log(isAuthenticated);
       navigate("/admin"); //dirige sur la page admin
     } catch (e) {
       console.log(e);

@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import React from "react";
 
 const Cards = ({ gite }) => {
-  console.log(gite);
   return (
     <>
       <Link to={`/gite/` + gite.ID_Gite} state={gite}>
