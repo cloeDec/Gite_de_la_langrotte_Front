@@ -106,7 +106,7 @@ const Contact = () => {
           sitekey="6Ldap2spAAAAAFwRexCLmI2G7GaNleRGmx53hgmJ"
           onChange={onChange}
         />
-        , <button type="submit">Envoyer</button>
+        <button type="submit">Envoyer</button>
       </form>
 
       <div className="location-container">

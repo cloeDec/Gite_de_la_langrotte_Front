@@ -30,6 +30,9 @@ function NavBar() {
         {/* Conteneur des liens de navigation */}
         <div className={isActive ? "nav-links active" : "nav-links"}>
           {/* Liens de navigation avec redirection vers différentes pages et fermeture du menu */}
+          <Link to={"/utilisateur"} className="lien_nav" onClick={closeMenu}>
+            Profil
+          </Link>
           <Link to={"/admin"} className="lien_nav" onClick={closeMenu}>
             Gites
           </Link>
@@ -40,7 +43,6 @@ function NavBar() {
            Réservation
           </Link>
          
-          {/* Ajouter de nouveaux boutons si nécessaire */}
         </div>
 
         {/* Icône du menu burger pour les écrans plus petits */}

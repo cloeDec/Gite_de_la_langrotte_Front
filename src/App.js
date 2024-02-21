@@ -14,6 +14,7 @@ import Reservation from "./Pages/Reservation";
 import Admin from "./Pages/AdminGite";
 import AdminClient from "./Pages/AdminClient";
 import AdminReservation from "./Pages/AdminReservation";
+import AdminProfil from "./Pages/AdminProfil";
 import Connexion from "./Components/Connexion";
 import { ToastContainer } from "react-toastify";
 import ModifGite from "./Pages/AdminModifGite";
@@ -51,6 +52,7 @@ function App() {
               <Route path={"/adminclient"} element={<AdminClient />} />
               <Route path={"/adminreservation"} element={<AdminReservation />} />
               <Route path={"/admin/:id"} element={<ModifGite />} />
+              <Route path={"/utilisateur/:id"} element={<AdminProfil />} />
           </Routes>
           {/* Inclusion du composant de pied de page */}
           <Footer />
